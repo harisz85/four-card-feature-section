@@ -1,0 +1,170 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan:  hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue:  hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray:  hsl(0, 0%, 98%); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  background-color: var(--very-light-gray);
+  font-size: 0.9375em;
+  font-family: 'Poppins', sans-serif; }
+
+.container {
+  text-align: center;
+  width: 80%;
+  margin: 3rem auto; }
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 97%; } }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+    .container h1 {
+      font-size: 1.5rem; } }
+
+.heading-primary {
+  font-weight: 200; }
+  @media screen and (max-width: 1200px) {
+    .heading-primary {
+      padding-bottom: 1rem; } }
+
+.heading-quaternary {
+  width: 34%;
+  margin: 1rem auto;
+  color: var(--grayish-blue);
+  font-weight: 400; }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+    .heading-quaternary {
+      width: 90%; } }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+    .heading-quaternary {
+      width: 85%; } }
+
+.cardbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem; }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+    .cardbox {
+      justify-content: initial;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      align-items: baseline; } }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+    .cardbox {
+      flex-direction: column; } }
+
+.column {
+  flex-basis: 30%; }
+  .column:not(:last-child) {
+    margin-right: 3rem; }
+    @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+      .column:not(:last-child) {
+        margin-right: auto; } }
+    @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+      .column:not(:last-child) {
+        margin-right: 1rem; } }
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .column:not(:last-child) {
+      margin-right: 2rem; } }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+    .column {
+      flex-basis: auto;
+      max-width: 90%;
+      margin: 1rem auto; }
+      .column:first-child {
+        margin-top: 1rem; } }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+    .column {
+      margin: 0 1rem 1rem 1rem; } }
+
+.card {
+  position: relative;
+  padding: 3rem;
+  text-align: left;
+  box-shadow: 3px 2px 8px 2px var(--grayish-blue);
+  border-radius: 10px; }
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .card {
+      padding-left: 2rem; } }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 5.5px;
+    width: 99.3%;
+    transform: translate(-2.9rem, -3rem);
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px; }
+    @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      .card::before {
+        transform: translate(-2rem, -3rem); } }
+  .card--1 {
+    top: 25%; }
+    @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      .card--1 {
+        top: 30%; } }
+    .card--1::before {
+      background-color: var(--cyan); }
+  .card--2::before {
+    background-color: var(--red); }
+  .card--3 {
+    margin-top: 3rem; }
+    .card--3::before {
+      background-color: var(--orange); }
+    @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+      .card--3 {
+        margin-top: 2rem; } }
+    @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+      .card--3 {
+        margin-top: 1rem; } }
+  .card--4 {
+    top: 25%; }
+    @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      .card--4 {
+        top: 15%; } }
+    @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      .card--4 {
+        padding-bottom: 2rem; } }
+    .card--4::before {
+      background-color: var(--blue); }
+  .card p {
+    width: 83%;
+    padding-top: 1rem;
+    color: var(--grayish-blue);
+    font-weight: 400; }
+    @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      .card p {
+        width: 100%; } }
+    @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: portrait) {
+      .card p {
+        width: 100%; } }
+
+.image {
+  max-width: 20%;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: .8rem;
+  transform: translate(460%, 30%); }
+  @media screen and (max-width: 1200px) {
+    .image {
+      max-width: 18%; } }
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .image {
+      max-width: 46%;
+      transform: translate(0%, 30%); } }
+  @media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+    .image {
+      transform: translate(680%, 30%); } }
